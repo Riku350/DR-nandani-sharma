@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>For Nandani ❤️</title>
+<style>
+body {
+  font-family: Arial;
+  text-align: center;
+  background: linear-gradient(to right, pink, purple);
+  color: white;
+}
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+}
+.box {
+  display: none;
+}
+</style>
+</head>
 
+<body>
+
+<h1>💖 Hello Nandani 💖</h1>
+
+<div id="step1">
+  <h2>Nandani khana kha li? 🍽️</h2>
+  <button onclick="next1()">Haa</button>
+  <button onclick="gussa()">Naa</button>
+</div>
+
+<div id="step2" class="box">
+  <h2>Padhai kar rahi ho? 📚</h2>
+  <button onclick="next2()">Haa</button>
+  <button onclick="gussa()">Nind lag raha hai</button>
+</div>
+
+<div id="step3" class="box">
+  <h2>Apni pasand batao 💝</h2>
+  <input type="text" placeholder="Kya chahiye?" id="gift">
+  <br><br>
+  <button onclick="final()">Submit</button>
+</div>
+
+<h2 id="result"></h2>
+
+<script>
+function next1() {
+  document.getElementById("step1").style.display = "none";
+  document.getElementById("step2").style.display = "block";
+}
+
+function next2() {
+  document.getElementById("step2").style.display = "none";
+  document.getElementById("step3").style.display = "block";
+}
+
+function gussa() {
+  document.getElementById("result").innerHTML = "😡 Gussa aa gaya!";
+}
+
+function final() {
+  let gift = document.getElementById("gift").value;
+  document.getElementById("result").innerHTML =
+  "💖 Tumhari pasand: " + gift + " 💖 Main jarur dilaunga!";
+}
+</script>
+
+</body>
+</html>
